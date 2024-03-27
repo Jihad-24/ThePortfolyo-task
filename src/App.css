@@ -364,6 +364,13 @@ section {
   font-size: 4rem;
   margin-bottom: 2rem;
 }
+.services .box-container .box img {
+  height: 30rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  /* box-shadow: -8px 0px 14px -5px grey; */
+}
 
 .services .box-container .box h3 {
   margin: 1rem 0;

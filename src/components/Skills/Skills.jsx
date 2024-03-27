@@ -6,7 +6,7 @@ const Skills = () => {
   const filteredSkills = userData?.skills?.filter(
     (skill) => skill?.enabled === true
   );
-  console.log(filteredSkills);
+//   console.log(filteredSkills);
   return (
     <div className="skills" id="skills">
       <h1 className="heading" data-aos="fade-up">
