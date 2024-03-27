@@ -9,11 +9,8 @@ import Footer from "./components/Footer/Footer";
 import Skills from "./components/Skills/Skills";
 import TimeLine from "./components/TimeLine/TimeLine";
 import About from "./components/About/About";
-import useUserData from "./Hook/useUserData";
 
 function App() {
-  // const userData = useUserData();
-  // console.log(userData?.about);
   useEffect(() => {
     const menu = document.querySelector("#menu-btn");
     const header = document.querySelector(".header");

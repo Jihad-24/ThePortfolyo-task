@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bouce-tech:hover {
+  animation: bounce 1s ease infinite;
+}

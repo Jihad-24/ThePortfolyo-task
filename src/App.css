@@ -266,6 +266,10 @@ section {
   border: var(--border-bold);
   padding: 1rem;
 }
+.about .skills .progress .bar h3 img {
+  width: 4rem;
+  height: 4rem;
+}
 
 .web_details {
   display: flex;

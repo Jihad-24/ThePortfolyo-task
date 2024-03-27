@@ -2,7 +2,7 @@ import useUserData from "../../Hook/useUserData";
 
 const About = () => {
   const userData = useUserData();
-//   console.log(userData?.about);
+  //   console.log(userData?.about);
   const setData = userData?.about;
 
   return (
@@ -12,25 +12,28 @@ const About = () => {
       </h1>
       <div className="biography">
         <p data-aos="fade-up">{setData?.description}</p>
-        <div className="bio">
-          <h3 data-aos="zoom-in">
+        <div className="bio ">
+          <h3 data-aos="zoom-in" className="bouce-tech">
             <span>Name : </span>
             {setData?.name}
           </h3>
-          <h3 data-aos="zoom-in">
+          <h3 data-aos="zoom-in" className="bouce-tech">
             <span>Email : </span> {setData?.contactEmail}
           </h3>
-          <h3 data-aos="zoom-in">
+          <h3 data-aos="zoom-in" className="bouce-tech">
             <span>Address : </span> {setData?.address}
           </h3>
-          <h3 data-aos="zoom-in">
+          <h3 data-aos="zoom-in" className="bouce-tech">
             <span>Phone : </span>
             {setData?.phoneNumber}
           </h3>
-          <h3 data-aos="zoom-in">
+          <h3 data-aos="zoom-in" className="bouce-tech">
             <span>Age : </span>25 Years old
           </h3>
-          <h3 data-aos="zoom-in"><span>Experience : </span>{setData?.exp_year} Years</h3>
+          <h3 data-aos="zoom-in" className="bouce-tech">
+            <span>Experience : </span>
+            {setData?.exp_year} Years
+          </h3>
         </div>
         <div className="resume">
           <a
