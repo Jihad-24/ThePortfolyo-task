@@ -5,7 +5,7 @@ const SideNav = () => {
       <a href="#home" className="logo">
         Portfolio
       </a>
-      <nav className="navbar">
+      <nav className="navbar  overflow-y-auto">
         <a href="#home" className="active">
           home
         </a>
@@ -14,6 +14,7 @@ const SideNav = () => {
         <a href="#services">services</a>
         <a href="#timeline">timeline</a>
         <a href="#portfolio">projects</a>
+        <a href="#testimonials">testimonials</a>
         <a href="#contact">contact</a>
       </nav>
       <div className="follow">
