@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Skills from "./components/Skills/Skills";
 import TimeLine from "./components/TimeLine/TimeLine";
 import About from "./components/About/About";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,7 @@ function App() {
         </section>
        <Services/>
         <Projects/>
+        <Testimonial/>
         <Contact/>
         <Footer/>
       </div>
