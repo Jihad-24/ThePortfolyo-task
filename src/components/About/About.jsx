@@ -1,31 +1,36 @@
+import useUserData from "../../Hook/useUserData";
+
 const About = () => {
+  const userData = useUserData();
+//   console.log(userData?.about);
+  const setData = userData?.about;
+
   return (
     <section>
       <h1 className="heading" data-aos="fade-up">
         <span>biography</span>
       </h1>
       <div className="biography">
-        <p data-aos="fade-up">
-          Hi, My name is Jihad Hasan i am a full stack developer developer from
-          bangladesh. The stack I work on in web development is MERN Stack.
-        </p>
+        <p data-aos="fade-up">{setData?.description}</p>
         <div className="bio">
           <h3 data-aos="zoom-in">
-            <span>Name : </span>JIhad Hasan
+            <span>Name : </span>
+            {setData?.name}
           </h3>
           <h3 data-aos="zoom-in">
-            <span>Email : </span> mdjihat0021@gmail.com
+            <span>Email : </span> {setData?.contactEmail}
           </h3>
           <h3 data-aos="zoom-in">
-            <span>Address : </span> Dhaka Bangladesh
+            <span>Address : </span> {setData?.address}
           </h3>
           <h3 data-aos="zoom-in">
-            <span>Phone : </span>+880 164-520-2421
+            <span>Phone : </span>
+            {setData?.phoneNumber}
           </h3>
           <h3 data-aos="zoom-in">
-            <span>Age : </span>21 Years old
+            <span>Age : </span>25 Years old
           </h3>
-          {/* <h3 data-aos="zoom-in"><span>Experience : </span>1+ Years</h3> */}
+          <h3 data-aos="zoom-in"><span>Experience : </span>{setData?.exp_year} Years</h3>
         </div>
         <div className="resume">
           <a

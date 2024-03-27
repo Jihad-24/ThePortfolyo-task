@@ -2,7 +2,7 @@ import useUserData from "../../Hook/useUserData";
 
 const Hero = () => {
   const userData = useUserData();
-  console.log(userData?.about);
+//   console.log(userData?.about);
   const setData = userData?.about;
   //   console.log(setData?.alternateAvatars[0]?.url);
   return (
