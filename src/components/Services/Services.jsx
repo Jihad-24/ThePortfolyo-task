@@ -2,7 +2,7 @@ import useUserData from "../../Hook/useUserData";
 
 const Services = () => {
   const userData = useUserData();
-  console.log(userData?.services);
+  // console.log(userData?.services);
   const filteredServices = userData?.services?.filter(
     (service) => service?.enabled === true
   );
