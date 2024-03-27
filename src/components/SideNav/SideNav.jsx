@@ -10,7 +10,9 @@ const SideNav = () => {
           home
         </a>
         <a href="#about">about</a>
+        <a href="#skills">skills</a>
         <a href="#services">services</a>
+        <a href="#timeline">timeline</a>
         <a href="#portfolio">projects</a>
         <a href="#contact">contact</a>
       </nav>
