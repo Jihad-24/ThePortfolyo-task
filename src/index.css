@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --initial-bg-color: var(--green); 
+  --hover-bg-color: #36c036;
+}
+
 .bouce-tech:hover {
   animation: bounce 1s ease infinite;
 }

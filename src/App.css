@@ -347,6 +347,11 @@ section {
   line-height: 2;
 }
 
+.services .direction i {
+  font-size: large;
+  color: var(--green);
+}
+
 .services .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -358,6 +363,7 @@ section {
   border: var(--border-light);
   border-radius: 13px;
   padding-bottom: 20px;
+  height: 42rem;
 }
 
 .services .box-container .box i {
@@ -396,6 +402,33 @@ section {
 
 .services .box-container .box:hover p {
   color: var(--white);
+}
+
+.services .box-container .box:hover .regular-content {
+  display: none;
+}
+
+.services .box-container .box .hover-content {
+  opacity: 0;
+  background-color: var(--initial-bg-color);
+  background-image: url("../src/assets/istockphoto-1333535544-612x612.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: opacity 1.5s ease, background-color 1.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.services .box-container .box:hover .hover-content {
+  opacity: 1;
+  background-color: var(--hover-bg-color);
+}
+
+.services .box-container .box:hover .hover-content p {
+  color: black;
 }
 
 .portfolio .box-container {
