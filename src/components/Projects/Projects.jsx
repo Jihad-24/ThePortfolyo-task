@@ -9,6 +9,7 @@ const Projects = () => {
     (project) => project?.enabled === true
   );
 
+  console.log(filteredProjects);
   return (
     <section className="portfolio" id="portfolio">
       <h3 className="heading" data-aos="fade-up">

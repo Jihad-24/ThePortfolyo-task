@@ -21,7 +21,7 @@ const Hero = () => {
         />
       </div>
       <div className="content">
-        <h3 data-aos="fade-up" className="bouce-tech">
+        <h3 data-aos="fade-up" className="bouce-techall">
           Hi, I am {setData?.name}
         </h3>
         <span className="bouce-tech text-white" data-aos="fade-up">

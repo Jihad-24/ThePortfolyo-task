@@ -5,3 +5,6 @@
 .bouce-tech:hover {
   animation: bounce 1s ease infinite;
 }
+.bouce-techall {
+  animation: bounce 1.5s ease infinite;
+}

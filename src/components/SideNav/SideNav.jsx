@@ -18,26 +18,10 @@ const SideNav = () => {
         <a href="#contact">contact</a>
       </nav>
       <div className="follow">
-        <a
-          href="https://www.facebook.com/fb.Jihad.Hasan"
-          target="_blank"
-          className="fab fa-facebook-f"
-        />
-        <a
-          href="https://www.instagram.com/mdjihad1221/"
-          target="_blank"
-          className="fab fa-instagram"
-        />
-        <a
-          href="https://www.linkedin.com/in/jihad-hasan/"
-          target="_blank"
-          className="fab fa-linkedin"
-        />
-        <a
-          href="https://github.com/Jihad-24"
-          target="_blank"
-          className="fab fa-github"
-        />
+        <a href="#" target="_blank" className="fab fa-facebook-f" />
+        <a href="#" target="_blank" className="fab fa-instagram" />
+        <a href="#" target="_blank" className="fab fa-linkedin" />
+        <a href="#" target="_blank" className="fab fa-github" />
       </div>
     </header>
   );

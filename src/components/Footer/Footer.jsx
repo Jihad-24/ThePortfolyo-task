@@ -1,12 +1,12 @@
-
-
 const Footer = () => {
-    return (
-        <div className="credit">
-          {" "}
-          © copyright @{/*?php echo date('Y'); ?*/} by <span>Jihad Hasan</span>
-        </div>
-    );
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <div className="credit">
+      {" "}
+      © copyright {currentYear} by <span>Jihad Hasan</span>
+    </div>
+  );
 };
 
 export default Footer;
