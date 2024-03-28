@@ -8,3 +8,142 @@
 .bouce-techall {
   animation: bounce 1.5s ease infinite;
 }
+
+.bg {
+  background: #232d3f;
+}
+.font {
+  font-family: "DM Sans", sans-serif;
+}
+.super-text {
+  background: var(
+    --Gradient-Heading,
+    linear-gradient(90deg, #ff6b6b 0%, #ffe66d 50%, #6bffb8 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tech-dev {
+  background: linear-gradient(135deg, #aad4ff, #baf7a9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-resume {
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-resume:hover {
+  color: white;
+}
+
+.btn-resume:after {
+  content: "";
+  background: #232d3f;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn-resume:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: shakeX; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.fronted {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: zoomInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.banner-text {
+  margin: 0 0.5rem;
+
+  animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+.banner-img {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: flash; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+/* Define the animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.Contact-button {
+  border-radius: 9px;
+  background: var(
+    --gradient-dark-gradient,
+    linear-gradient(180deg, #1a1a1a 0%, #131313 100%)
+  );
+  /* Dark/Button Shadow */
+  box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.15),
+    0px 2px 4px 0px rgba(255, 255, 255, 0.08) inset,
+    0px 1px 2px 0px rgba(255, 255, 255, 0.02) inset;
+  /* Transition for smooth hover effect */
+  transition: transform 0.1s ease-in-out;
+}
+
+.Contact-button:hover {
+  /* Scale effect on hover */
+  transform: scale(1.08);
+}
+
+/* Create custom animation */
+@keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Apply animation to the scrolling section */
+.animate-scroll {
+  animation: scrollAnimation 1s ease-in-out;
+}

@@ -56,7 +56,9 @@ function App() {
     <>
       <div>
         <SideNav />
+        <div className="bg">
        <Hero/>
+       </div>
         <section  className="about" id="about">
        <About/>
         <Skills/>
