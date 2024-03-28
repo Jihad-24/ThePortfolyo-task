@@ -37,7 +37,7 @@ const Projects = () => {
     ];
   }
 
-  console.log(filteredProjects);
+  // console.log(filteredProjects);
   return (
     <section className="portfolio" id="portfolio">
       <h3 className="heading" data-aos="fade-up">
@@ -48,7 +48,7 @@ const Projects = () => {
           className="search"
           data-aos="zoom-in"
           type="text"
-          placeholder="Search by tech stack or sequence"
+          placeholder="Search by techStack or sequence number"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
