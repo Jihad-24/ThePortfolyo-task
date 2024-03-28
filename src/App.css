@@ -363,7 +363,7 @@ section {
   border: var(--border-light);
   border-radius: 13px;
   padding-bottom: 20px;
-  height: 42rem;
+  height: 41rem;
 }
 
 .services .box-container .box i {
@@ -389,7 +389,7 @@ section {
 
 .services .box-container .box p {
   line-height: 2;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .services .box-container .box:hover {
