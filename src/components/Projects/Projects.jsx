@@ -12,7 +12,7 @@ const Projects = () => {
   );
 
   if (searchQuery) {
-    const searchTerms = searchQuery.toLowerCase().split(" " || ",");
+    const searchTerms = searchQuery.toLowerCase().split(" ");
     const techStackFilteredProjects = filteredProjects.filter((project) =>
       searchTerms.every((term) =>
         project?.techStack?.some((stack) => stack.toLowerCase().includes(term))
@@ -24,7 +24,7 @@ const Projects = () => {
         return project?.sequence === parseInt(searchQuery);
       } else {
         const sequenceNumbers = searchQuery
-          .split(" " || ",")
+          .split(" ")
           .map((num) => parseInt(num.trim()))
           .filter((num) => !isNaN(num));
         return sequenceNumbers.includes(project?.sequence);
