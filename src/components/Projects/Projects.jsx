@@ -5,9 +5,37 @@ import Modal from "./Modal";
 const Projects = () => {
   const [openModal, setOpenModal] = useState(null);
   const userData = useUserData();
-  const filteredProjects = userData?.projects?.filter(
+  const [searchQuery, setSearchQuery] = useState("");
+
+  let filteredProjects = userData?.projects?.filter(
     (project) => project?.enabled === true
   );
+
+  if (searchQuery) {
+    const searchTerms = searchQuery.toLowerCase().split(" " || ",");
+    const techStackFilteredProjects = filteredProjects.filter((project) =>
+      searchTerms.every((term) =>
+        project?.techStack?.some((stack) => stack.toLowerCase().includes(term))
+      )
+    );
+
+    const sequenceFilteredProjects = filteredProjects.filter((project) => {
+      if (!isNaN(searchQuery)) {
+        return project?.sequence === parseInt(searchQuery);
+      } else {
+        const sequenceNumbers = searchQuery
+          .split(" " || ",")
+          .map((num) => parseInt(num.trim()))
+          .filter((num) => !isNaN(num));
+        return sequenceNumbers.includes(project?.sequence);
+      }
+    });
+
+    filteredProjects = [
+      ...techStackFilteredProjects,
+      ...sequenceFilteredProjects,
+    ];
+  }
 
   console.log(filteredProjects);
   return (
@@ -15,6 +43,16 @@ const Projects = () => {
       <h3 className="heading" data-aos="fade-up">
         <span>portfolio</span>
       </h3>
+      <div className="pb-5">
+        <input
+          className="search"
+          data-aos="zoom-in"
+          type="text"
+          placeholder="Search by tech stack or sequence"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
       <div className="box-container">
         {filteredProjects?.map((project) => (
           <div
@@ -45,7 +83,9 @@ const Projects = () => {
         <Modal
           setOpenModal={setOpenModal}
           openModal={openModal}
-          project={filteredProjects.find(project => project._id === openModal)}
+          project={filteredProjects.find(
+            (project) => project._id === openModal
+          )}
         />
       )}
     </section>
