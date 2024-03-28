@@ -261,8 +261,10 @@ section {
 }
 
 .about .skills .progress .bar {
-  margin: 1rem auto;
-  max-width: 70rem;
+  margin: 1rem 1rem 1rem 1rem;
+  /* max-width: 70rem; */
+  width: 45%;
+  float: left;
   border: var(--border-bold);
   padding: 1rem;
 }
@@ -587,6 +589,11 @@ section {
 
   .about .biography .bio h3 {
     font-size: 2rem;
+  }
+
+  .about .skills .progress .bar {
+    width: 100%; 
+    float: none; 
   }
 
   .contact form .flex .box {

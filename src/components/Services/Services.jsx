@@ -5,6 +5,9 @@ const Services = () => {
   const userData = useUserData();
   const [pageNumber, setPageNumber] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(3);
+  const filteredServices = userData?.services?.filter(
+    (service) => service?.enabled === true
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +28,7 @@ const Services = () => {
   }, []);
 
   const numberOfPages = Math.ceil(
-    (userData?.services?.length || 0) / cardsPerPage
+    (filteredServices?.length || 0) / cardsPerPage
   );
 
   const updatePageNumber = (newPageNumber) => {
@@ -36,7 +39,7 @@ const Services = () => {
 
   const indexOfLastCard = pageNumber * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentCards = userData?.services?.slice(
+  const currentCards = filteredServices?.slice(
     indexOfFirstCard,
     indexOfLastCard
   );
