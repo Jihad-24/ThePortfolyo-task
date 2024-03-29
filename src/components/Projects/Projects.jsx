@@ -109,13 +109,10 @@ const Projects = () => {
       {filteredProjects?.length > displayCount && (
         <div className="effectbtn flex justify-center items-center text-center mt-10 rounded-full">
           <button
-            className="relative h-20 w-40 origin-bottom transform rounded-full border-2 border-gray-700 text-2xl text-green-700 overflow-hidden "
+            className="h-20 w-40 md:w-52 origin-bottom transform rounded-full border-2 shadow-2xl border-green-600 text-2xl text-green-500 overflow-hidden hover:bg-green-500 hover:text-white hover:border-green-600 cursor-pointer"
             onClick={() => setDisplayCount(displayCount + 6)}
           >
             Show More
-            <span className="absolute inset-0 bg-green-400 origin-left transform scale-x-0 transition-transform duration-500 group-hover:scale-x-100 text-center flex justify-center items-center">
-              Show More
-            </span>
           </button>
         </div>
       )}

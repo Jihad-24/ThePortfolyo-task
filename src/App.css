@@ -489,11 +489,11 @@ section {
   resize: none;
 }
 
-.contact form .flex {
+/* .contact form .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
+} */
 
 .contact form .flex .box {
   width: 49%;
