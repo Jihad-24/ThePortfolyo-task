@@ -465,6 +465,10 @@ section {
   border: var(--border-light);
   margin: 1rem 0;
 }
+.portfolio .effectbtn button:hover .bg-green-400 {
+  color: white;
+  transform: scaleX(1);
+}
 
 .contact form {
   max-width: 70rem;
@@ -592,8 +596,8 @@ section {
   }
 
   .about .skills .progress .bar {
-    width: 100%; 
-    float: none; 
+    width: 100%;
+    float: none;
   }
 
   .contact form .flex .box {
