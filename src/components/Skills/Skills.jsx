@@ -3,7 +3,7 @@ import useUserData from "../../Hook/useUserData";
 
 const Skills = () => {
   const userData = useUserData();
-  const [pageNumber, setPageNumber] = useState(5);
+  const [pageNumber, setPageNumber] = useState(1);
   const [cardsPerPage, setCardsPerPage] = useState(10);
   //   console.log(userData?.skills);
   const filteredSkills = userData?.skills?.filter(
