@@ -28,7 +28,7 @@ const Projects = () => {
     }
   };
 
-  console.log("filteredProjects", filteredProjects);
+  // console.log("filteredProjects", filteredProjects);
   return (
     <section className="portfolio" id="portfolio">
       <h3 className="heading" data-aos="fade-up">

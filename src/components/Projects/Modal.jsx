@@ -10,43 +10,45 @@ const Modal = ({ setOpenModal, project, openModal }) => {
     >
       <div
         onClick={(e_) => e_.stopPropagation()}
-        className={`absolute w-4/5 lg:w-1/2 p-6 text-center bg-white drop-shadow-2xl rounded-lg ${
+        className={`absolute w-4/5 lg:w-1/3 h-3.5/5 p-6 text-center bg-white drop-shadow-2xl rounded-lg ${
           openModal
             ? "translate-y-0 opacity-1 duration-300"
             : "translate-y-20 opacity-0 duration-150"
         }`}
       >
         <div className="space-y-3 flex flex-col justify-center items-center">
-          <img src={project?.image?.url} alt={project?.title} />
-          <h2>{project?.title}</h2>
-          <h6 className="font-medium text-center text-slate-700">
+          <img className="" src={project?.image?.url} alt={project?.title} />
+          <h2 className="text-2xl font-medium">{project?.title}</h2>
+          <h6 className="font-normal text-center text-lg text-slate-700">
             {project?.description}
           </h6>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap items-center justify-center text-center gap-3 text-2xl">
             TechStack:{" "}
             {project?.techStack?.map((tec) => (
-              <h3 key={tec}>{tec}</h3>
+              <h3 className="text-2xl" key={tec}>
+                {tec},
+              </h3>
             ))}
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-evenly w-full">
             <a
               target="_blank"
               href={project?.liveurl}
-              className="text-[#16BAC5] hover:text-white hover:bg-green-600 px-6 py-2 border border-[#16BAC5] rounded-full"
+              className="text-[#16BAC5] hover:text-white hover:bg-green-600 px-8 py-4 w-full border border-[#16BAC5] rounded-full text-xl"
             >
               Live
             </a>
             <a
               target="_blank"
               href={project?.githuburl}
-              className="text-[#16BAC5] hover:text-white hover:bg-green-600 px-6 py-2 border border-[#16BAC5] rounded-full"
+              className="text-[#16BAC5] hover:text-white hover:bg-green-600 px-8 py-4 w-full border border-[#16BAC5] rounded-full text-xl"
             >
               GitHub
             </a>
           </div>
           <button
             onClick={() => setOpenModal(null)}
-            className="text-[#c51636] hover:text-white hover:bg-[#c51636] px-6 py-2 border border-[#c51636] rounded-full"
+            className="text-[#c51636] hover:text-white hover:bg-[#c51636] px-8 py-4 w-full border border-[#c51636] rounded-full text-xl"
           >
             Close
           </button>
