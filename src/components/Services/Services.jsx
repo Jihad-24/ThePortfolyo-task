@@ -11,10 +11,10 @@ const Services = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setCardsPerPage(1);
-      } else {
+      if (window.innerWidth >= 768) {
         setCardsPerPage(3);
+      } else {
+        setCardsPerPage(1);
       }
     };
 

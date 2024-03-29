@@ -12,10 +12,10 @@ const Skills = () => {
   // console.log(filteredSkills);
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setCardsPerPage(5);
-      } else {
+      if (window.innerWidth >= 768) {
         setCardsPerPage(10);
+      } else {
+        setCardsPerPage(5);
       }
     };
 
