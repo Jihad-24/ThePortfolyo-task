@@ -34,7 +34,7 @@ const Projects = () => {
       <h3 className="heading" data-aos="fade-up">
         <span>portfolio</span>
       </h3>
-      <div className="text-xl md:text-2xl flex flex-wrap justify-center items-center mb-10 font-medium">
+      <div className="text-xl md:text-2xl flex flex-wrap justify-center items-center mb-10 font-medium" data-aos="zoom-in">
         {Array.from(
           new Set([
             "All",
