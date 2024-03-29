@@ -11,7 +11,7 @@ const Hero = () => {
 
   const title = setData?.title;
   const words = title ? title.split(" ") : [];
-  const midpoint = Math.ceil(words.length / 2);
+  const midpoint = Math.ceil(words?.length / 2);
   const firstHalf = words.slice(0, midpoint);
   const lastHalf = words.slice(midpoint);
 

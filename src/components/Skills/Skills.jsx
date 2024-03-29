@@ -28,7 +28,7 @@ const Skills = () => {
     };
   }, []);
 
-  const numberOfPages = Math.ceil((filteredSkills.length || 0) / cardsPerPage);
+  const numberOfPages = Math.ceil((filteredSkills?.length || 0) / cardsPerPage);
 
   const updatePageNumber = (newPageNumber) => {
     if (newPageNumber > 0 && newPageNumber <= numberOfPages) {
